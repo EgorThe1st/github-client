@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Github Client</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="server_error">Server error.</string>
+    <string name="error_empty_name">Error! Empty field.</string>
+    <string name="activity_authorization">Authorization</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="toast_no_repos">No repositories found</string>
+    <string name="exit">Exit</string>
+    <string name="error_root">Root device. Are you sure want to continue?</string>
+    <string name="refresh">Refresh</string>
+    <string name="no_connection">No connection</string>
+    <string name="settings">Settings</string>
+    <string name="activity_repositories">Repositories</string>
+    <string name="activity_settings">Settings</string>
+    <string name="activity_profile">Profile</string>
+    <string name="name">Name</string>
+    <string name="hint_auth_name">Github username</string>
+    <string name="password">Password</string>
+    <string name="repositories">Repositories</string>
+    <string name="starred_repositories">Starred repositories</string>
+    <string name="gists">Gists</string>
+    <string name="followers_following">Followers/Following</string>
+    <string name="email">Email</string>
+    <string name="bio">Bio</string>
+    <string name="edit">Edit</string>
+</resources>

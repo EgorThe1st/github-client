@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/content_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_photo"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:src="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_photo"
+            tools:text="Egor" />
+
+        <TextView
+            android:id="@+id/repositories_title"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/repositories"
+            app:layout_constraintBottom_toBottomOf="@+id/repositories_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/repositories_button" />
+
+        <TextView
+            android:id="@+id/repositories_count"
+            style="@style/CountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/repositories_title"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="2" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?dividerHorizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/repositories_button" />
+
+        <Button
+            android:id="@+id/repositories_button"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="16dp"
+            android:background="?selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_name"
+            android:onClick="onRepositoriesClicked" />
+
+        <TextView
+            android:id="@+id/starred_repos_title"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/starred_repositories"
+            app:layout_constraintBottom_toBottomOf="@+id/starred_repos_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/starred_repos_button" />
+
+        <TextView
+            android:id="@+id/starred_repos_count"
+            style="@style/CountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/starred_repos_title"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="2" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?dividerHorizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/starred_repos_button" />
+
+        <Button
+            android:id="@+id/starred_repos_button"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="0dp"
+            android:background="?selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/repositories_button"
+            android:onClick="onNotImplClicked" />
+
+        <TextView
+            android:id="@+id/gists_title"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/gists"
+            app:layout_constraintBottom_toBottomOf="@+id/gists_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/gists_button" />
+
+        <TextView
+            android:id="@+id/gists_count"
+            style="@style/CountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/gists_title"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="2" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?dividerHorizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/gists_button" />
+
+        <Button
+            android:id="@+id/gists_button"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="0dp"
+            android:background="?selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/starred_repos_button"
+            android:onClick="onNotImplClicked" />
+
+        <TextView
+            android:id="@+id/social_title"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/followers_following"
+            app:layout_constraintBottom_toBottomOf="@+id/social_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/social_button" />
+
+        <TextView
+            android:id="@+id/social_count"
+            style="@style/CountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/social_title"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="2/0" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?dividerHorizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/social_button" />
+
+        <Button
+            android:id="@+id/social_button"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="0dp"
+            android:background="?selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gists_button"
+            android:onClick="onNotImplClicked" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
