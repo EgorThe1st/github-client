@@ -59,8 +59,6 @@ class RemoteDataSource : DataSource {
 
     override fun updateUser(jsonObject: JSONObject): Single<JSONObject> {
 
-        println(jsonObject)
-
         return Rx2AndroidNetworking
                 .patch(patchUserUrl)
                 .addHeaders(headerKey, headerValue)
